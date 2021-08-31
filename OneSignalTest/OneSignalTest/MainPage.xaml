@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:onesignaltest="clr-namespace:OneSignalTest"
+             x:Class="OneSignalTest.MainPage">
+    <ContentPage.BindingContext>
+        <onesignaltest:MainPageModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="This works on Android but not iOS" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+        </Frame>
+        <Button Text="Initialize OneSignal" Command="{Binding InitCommand}" Margin="40"/>
+
+        <Button Text="Register Push" Command="{Binding RegisterPush}" Margin="0"/>
+
+        <Button Text="FetchIDs" Command="{Binding FetchCommand}" Margin="40"/>
+
+    </StackLayout>
+
+</ContentPage>
